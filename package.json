@@ -1,0 +1,35 @@
+{
+  "name": "interactive-rating-component",
+  "version": "1.0.0",
+  "description": "![Design preview for the interactive rating component coding challenge](./assets/'design handout'/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "watch": "sass --watch assets/scss/main.scss assets/css/development/style-scss-compiled.css",
+    "format": "prettier --write \"js/**/*.js\"",
+    "compile": "sass assets/scss/main.scss assets/css/development/style-scss-compiled.css",
+    "prefix": "postcss ./assets/css/development/style-scss-compiled.css --use autoprefixer -o ./assets/css/development/style-scss-compiled-prefixed.css",
+    "minify": "postcss ./assets/css/development/style-scss-compiled-prefixed.css --use cssnano -o ./assets/css/development/style-scss-compiled-prefixed-minified.css",
+    "copy": "copyfiles -f ./assets/css/development/style-scss-compiled-prefixed-minified.css ./assets/css/public/",
+    "rename": "renamer -f \"/^style-scss-compiled-prefixed-minified.css$/\" \"assets/css/public/*\" -r \"style.css\" \"assets/css/public/*\"",
+    "prepare": "npm run compile && npm run prefix && npm run minify && npm run copy && npm run rename && npm run format && npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mikeFrees/interactiv-rating-component.git"
+  },
+  "author": "Mike Frees <mike_frees@hotmail.com> (https://www.linkedin.com/in/mike-frees/)",
+  "license": "ISC",
+  "browserslist": "last 4 versions",
+  "devDependencies": {
+    "autoprefixer": "^10.4.15",
+    "copyfiles": "^2.4.1",
+    "cssnano": "^6.0.1",
+    "eslint": "^8.50.0",
+    "postcss": "^8.4.28",
+    "postcss-cli": "^10.1.0",
+    "prettier": "^3.0.3",
+    "renamer": "^4.0.0",
+    "sass": "^1.65.1"
+  }
+}
