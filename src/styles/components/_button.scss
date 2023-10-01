@@ -1,3 +1,20 @@
 // -----------------------------------------------------------------------------
+//  #Button
+//
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+
+.button {
+    color: $color-button-hover;
+    background-color: $color-score-hover;
+    border-radius: 5rem;
+    width: 90%;
+    height: 4rem;
+    align-self: center;
+    transition-duration: 500ms;
+}
+
+.button:hover {
+    background-color: $color-button-hover;
+    transition-duration: 500ms;
+}

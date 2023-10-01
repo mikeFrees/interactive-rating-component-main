@@ -1,3 +1,7 @@
+// -----------------------------------------------------------------------------
+//  #Main-stylesheet
+// -----------------------------------------------------------------------------
+
 @charset "UTF-8";
 
 // 1. Configuration and helpers
@@ -24,7 +28,8 @@
 
 // 5. Components
 @import
-  'components/button';
+  'components/button',
+  'components/attribution';
 
 // 6. Page-specific styles
 @import

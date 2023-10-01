@@ -1,3 +1,31 @@
 // -----------------------------------------------------------------------------
+//  #Typography
+//
 // This file contains typography CSS.
 // -----------------------------------------------------------------------------
+
+h1 {
+    font: 700 2.4rem/2.8rem $font-stack;
+    color: $color-button-hover;
+}
+
+p {
+    font: 400 1.4rem/2rem $font-stack;
+    color: $color-score;
+}
+
+button {
+    font: 400 1.4rem/1.6rem $font-stack;
+    color: $color-button-hover;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+button:hover {
+    color: $color-score-hover;
+}
+
+label {
+    font: 400 1.4rem/1.6rem $font-stack;
+    color: $color-score;
+}

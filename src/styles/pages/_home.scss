@@ -1,3 +1,67 @@
 // -----------------------------------------------------------------------------
+//  #Home-page
+//
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-background;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 80%;
+    height: 35%;
+    padding: 5%;
+    border-radius: 1rem;
+    background-color: $color-card;
+}
+
+img, label {
+    padding: 1rem;
+    background-color: hsla(216, 12%, 54%, 0.3);
+    border-radius: 50%;
+}
+
+input {
+    appearance: none;
+}
+
+input:checked {
+    & + label {
+        background-color: $color-score-active;
+        transition-duration: 500ms;
+    }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+    input:hover {
+        & + label {
+            background-color: $color-score-hover;
+            transition-duration: 500ms;
+        }
+    }
+}
+
+form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+label {
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    transition-duration: 500ms;
+}
