@@ -14,7 +14,16 @@
     transition-duration: 500ms;
 }
 
-.button:hover {
-    background-color: $color-button-hover;
+@media screen and (min-width: $breakpoint-mobile) {
+    .button:hover {
+        background-color: $color-button-hover;
+        transition-duration: 500ms;
+        color: $color-score-hover;
+    }
+}
+
+.button:active {
+    transform: scale(0.9);
     transition-duration: 500ms;
+    
 }

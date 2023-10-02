@@ -406,11 +406,13 @@ summary,
 h1 {
   font: 700 2.4rem/2.8rem "Overpass", sans-serif, Arial, Helvetica, sans-serif;
   color: #ffffff;
+  margin: 0;
 }
 
 p {
   font: 400 1.4rem/2rem "Overpass", sans-serif, Arial, Helvetica, sans-serif;
   color: #7c8798;
+  margin: 0;
 }
 
 button {
@@ -418,10 +420,6 @@ button {
   color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
-}
-
-button:hover {
-  color: #fb7413;
 }
 
 label {
@@ -455,8 +453,15 @@ footer p {
   transition-duration: 500ms;
 }
 
-.button:hover {
-  background-color: #ffffff;
+@media screen and (min-width: 800px) {
+  .button:hover {
+    background-color: #ffffff;
+    transition-duration: 500ms;
+    color: #fb7413;
+  }
+}
+.button:active {
+  transform: scale(0.9);
   transition-duration: 500ms;
 }
 
@@ -488,13 +493,14 @@ body {
 main {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: flex-start;
   width: 80%;
-  height: 35%;
+  height: 45%;
   padding: 5%;
   border-radius: 1rem;
   background-color: #252d37;
+  min-height: 35rem;
 }
 
 img, label {
@@ -504,32 +510,50 @@ img, label {
 }
 
 input {
+  display: none;
   appearance: none;
 }
 
 input:checked + label {
   background-color: #959eac;
+  color: #FFF;
   transition-duration: 500ms;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 800px) {
   input:hover + label {
     background-color: #fb7413;
+    color: #FFF;
     transition-duration: 500ms;
+  }
+  main {
+    max-width: 40rem;
+    width: 40%;
+    height: 45%;
+    padding: 2rem;
   }
 }
 form {
   width: 100%;
+  height: 20%;
   display: flex;
   justify-content: space-between;
   align-content: center;
 }
 
 label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
   cursor: pointer;
-  width: 2rem;
-  height: 2rem;
+  width: 4rem;
+  height: 4rem;
   transition-duration: 500ms;
+}
+
+img, h1, p {
+  margin-bottom: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
