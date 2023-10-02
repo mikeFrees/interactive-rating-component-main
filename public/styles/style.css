@@ -533,6 +533,12 @@ input:checked + label {
     padding: 2rem;
   }
 }
+@media screen and (orientation: landscape) {
+  main {
+    margin-top: 10rem;
+    min-height: 33rem;
+  }
+}
 form {
   width: 100%;
   height: 20%;
